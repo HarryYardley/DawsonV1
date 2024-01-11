@@ -1,0 +1,277 @@
+body, h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    font-size: 90%;
+    scroll-behavior: smooth;
+}
+
+body{
+
+    text-decoration: none;
+}
+
+h1 {
+    font-size:200%;
+    text-align: center;
+    color: #0d0e18;
+    background-color: #ffffff;
+    padding: 4px 20px;
+}
+
+h2{
+    text-align: center;
+}
+
+h4{
+    text-align: "center";
+    padding: 0 25%;
+
+}
+
+.content {
+    max-width: 100%;
+    /*margin: 0 auto;
+    padding: 20px;*/
+    display: flex; /* Use flexbox to arrange the columns */
+    justify-content: space-between; /* Space the columns equally */
+    padding: 2px; /* Optional: Add some padding around the columns */
+    height: 80vh; /* Set the height of the container */
+    margin: 20px 0 0 0;
+}
+
+.postclass{
+    background-color: #f4f6f8;
+    border-radius: 15px;
+    padding: 6px 20px;
+    margin: 10px 0;
+}
+
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2p 4px rgba(0,0,0,0.1);
+}
+
+form p {
+    margin: 10px 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbcde2;
+    border-radius: 20px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.upload-button {
+    background-color: rgb(45, 103, 228);
+    color: #fff;
+    padding: 10px 10px;
+    margin: 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.upload-button:hover {
+    background-color: rgb(53, 127, 238);
+    color:#ffffff;
+    transform: scale(1.025);
+}
+
+button[type="submit"] {
+    background-color: rgb(45, 103, 228);
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    margin: 0 0 0 37px;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(53, 127, 238);
+    color:#ffffff;
+    transform: scale(1.025);
+}
+
+.todo {
+    background-color: #f4f6f8;
+    height:91%;
+    padding: 5px 20px 20px 20px;
+    margin: 10px 0;
+    border-radius: 20px;
+    flex: 1;
+    margin: 0 2px; /* Optional: Add some margin between the columns */
+    /*box-shadow: 0 2px 4px rgba(0,0,0,0.1);*/
+}
+
+.todo p{
+    margin: 0;
+}
+
+.todo i {
+    color: #888;
+}
+
+.contententry{
+
+    max-width: 94%;
+    margin: 0 0 10px 0;
+}
+
+.delete-button {
+    background-color: rgb(45, 103, 228);
+    font-size: 110%;
+    color: #fff;
+    padding: 5px 11px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    outline: 2px solid white;
+}
+
+/* Styles for when the button is hovered over */
+.delete-button:hover {
+    background-color: rgb(53, 127, 238);
+    color:#ffffff;
+    transform: scale(1.025);
+}
+
+.deleteform{
+    padding: 2px;
+    border-radius: 30px;
+
+}
+
+.minitask{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex; /* Use flexbox to arrange the columns */
+    justify-content: space-between;
+    text-decoration: none;
+    transition: all 0.125s ease-in-out;
+}
+
+.minitask:hover{
+    transform: scale(1.025);
+    background-color: rgb(53, 127, 238);
+    color:#ffffff;
+}
+
+.custom-radio input[type='radio'] {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 1px solid rgb(53, 127, 238);
+    border-radius: 50%;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .custom-radio input[type='radio']:before {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin: 20% auto;
+    border-radius: 50%;
+  }
+  
+  .custom-radio input[type='radio']:checked:before {
+    background: rgb(53, 127, 238);
+  }
+
+  .dog2{
+    background: cover;
+    width: 80%;
+    margin: 6% 0 0 15%;
+  }
+
+  #leftsec{
+    background-color: white;
+  }
+
+  .top-banner {
+    color: #0d0e18;
+    padding: 7px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+}
+
+.links a {
+    font-size: 105%;
+    color: #0d0e18;
+    text-decoration: none;
+    margin-left: 40px;
+    transition: all 0.2s ease;
+}
+
+.links a:hover {
+    opacity: 55%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.file-upload input[type="file"] {
+    display: none; /* Hide the actual file input */
+}
+
+.file-upload .upload-button {
+    background-color:  rgb(45, 103, 228);; /* Set background color */
+    color: white; /* Text color */
+    font-size: 90%;
+    text-decoration: none;
+    padding: 10px 10px; /* Adjust padding */
+    cursor: pointer; /* Show pointer cursor */
+    border: none; /* Remove default button border */
+    transition: all 0.1s ease-in-out;
+
+}
+
+/* Style the submit button */
+.submit-button {
+    background-color:  rgb(45, 103, 228);; /* Set background color */
+    color: white; /* Text color */
+    padding: 10px 10px; /* Adjust padding */
+    cursor: pointer; /* Show pointer cursor */
+    border: none; /* Remove default button border */
+    margin: 2px 0 0 158px;
+    border-radius: 20px;
+    transition: all 0.1s ease-in-out;
+
+}
+
+/* Optional hover effect */
+.file-upload .upload-button:hover {
+    background-color: rgb(53, 127, 238); /* Change color on hover */
+}
+
+.submit-button:hover{
+    background-color: rgb(53, 127, 238);
+    transform: scale(1.025);
+}
+

@@ -1,0 +1,119 @@
+body, h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    font-size: 90%;
+    scroll-behavior: smooth;
+}
+
+body{
+
+    text-decoration: none;
+}
+
+h1 {
+    font-size:200%;
+    text-align: center;
+    color: #0d0e18;
+    background-color: #ffffff;
+    padding: 4px 20px;
+}
+
+.top-banner {
+    color: #0d0e18;
+    padding: 7px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+}
+
+.links a {
+    font-size: 105%;
+    color: #0d0e18;
+    text-decoration: none;
+    margin-left: 40px;
+    transition: all 0.2s ease;
+}
+
+.links a:hover {
+    opacity: 55%;
+}
+
+.atitle{
+    align-items: center;
+    text-align: center;
+    padding: 5% 0 0 0;
+
+}
+
+.dog2{
+    padding: 1% 31.5% 4% 31.5%;
+    text-align: center;
+    justify-content: center;
+    height: 30%;
+    width: 35%;
+    background: cover;
+}
+
+.contact{
+    color: white;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    max-height: 500px;
+}
+
+.textc{
+    font-size:2vh;
+    letter-spacing: -4.5px;
+    line-height: 110%;
+    padding: 0 0 10vh 0;
+}
+
+.conbox{
+    font-size:1vh;
+    width: 7vh;
+    height: 7vh;
+    margin:15px 40px;
+    text-align: center center;
+    border-radius:100px;
+    background:white;
+    background-size: cover;
+    background-position:center;
+    position: relative;
+    bottom: 0px;
+
+}
+
+.conbox{
+    background-image: url("GH2.png");
+    background-size: cover;
+
+}
+.conbox:nth-child(2){
+    background-image: url("LI.jpg")
+
+}
+    
+.featuretitle{
+    text-align: center;
+}
+
+.schedbody{
+    background-color: #f5f5f5;
+}
+.schedtit{
+    background-color: #f5f5f5;
+
+}
+
+
+

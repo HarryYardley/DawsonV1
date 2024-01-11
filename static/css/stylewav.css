@@ -1,0 +1,138 @@
+body, h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    font-size: 90%;
+    scroll-behavior: smooth;
+}
+
+body{
+
+    text-decoration: none;
+}
+
+h1 {
+    font-size:200%;
+    text-align: center;
+    color: #0d0e18;
+    background-color: #ffffff;
+    padding: 4px 20px;
+}
+
+.top-banner {
+    color: #0d0e18;
+    padding: 7px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+}
+
+.links a {
+    font-size: 105%;
+    color: #0d0e18;
+    text-decoration: none;
+    margin-left: 40px;
+    transition: all 0.2s ease;
+}
+
+.links a:hover {
+    opacity: 55%;
+}
+
+.mainbody{
+    margin: 2.5% 16% 0 8%;
+    min-height: 80%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.dog{
+    width: 55%;
+    padding: 0 0 0 25%;
+}
+
+.top{
+    font-size: 160%;
+    padding: 8% 0 0 12%;
+    line-height:185%;
+
+}
+
+span{
+    font-weight: normal;
+}
+
+.right{
+    background-color: #f4f6f8;   
+    padding: 20px 20px 0 20px;
+    border-radius: 20px;
+    flex: 1;
+    margin: 0 2px 20px 0; 
+    
+}
+
+.delete-button {
+    background-color: rgb(45, 103, 228);
+    font-size: 110%;
+    color: #fff;
+    padding: 5px 10.5px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    outline: 2px solid white;
+    margin: 5px 0 0 0;
+
+}
+
+/* Styles for when the button is hovered over */
+.delete-button:hover {
+    background-color: rgb(53, 127, 238);
+    color:#ffffff;
+    transform: scale(1.025);
+}
+
+.deleteform{
+    padding: 2px;
+    border-radius: 30px;
+
+}
+
+.minitask{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 6px 9px;
+    margin: 6px 0;
+    display: flex; /* Use flexbox to arrange the columns */
+    justify-content: space-between;
+    text-decoration: none;
+    transition: all 0.125s ease-in-out;
+}
+
+.minitask:hover{
+    transform: scale(1.025);
+    background-color: rgb(53, 127, 238);
+    color:#ffffff;
+}
+
+.minitask2{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 6px;
+    display: flex; /* Use flexbox to arrange the columns */
+    justify-content: space-between;
+    text-decoration: none;
+    transition: all 0.125s ease-in-out;
+    padding: 8px 44%;
+}
+
+.minitask2:hover{
+    transform: scale(1.025);
+    background-color: rgb(53, 127, 238);
+    color:#ffffff;
+}
