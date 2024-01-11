@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Dawson</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}"/>
+</head>
+<body>
+    <div class="top-banner">
+        <h1>Dawson</h1>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="wavfile.html">Missed</a>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class = "todo" id = "leftsec">
+            <form method="POST" class="postclass" action="/">
+                <!-- Other form elements -->
+                <input type="text" class="contententry" name="content" placeholder="task content...">
+                <!-- Degree field only in the task adding form -->
+                <label class="custom-radio">
+                    <input type="radio" name="degree" value="important">Important
+                </label>
+                <label class="custom-radio">
+                    <input type="radio" name="degree" value="unimportant">Unimportant
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+
+            <form method="POST" class="postclass" enctype="multipart/form-data" action="/upload_wav">
+                <!--<h4>Upload .wav File</h4>-->
+                <label class="file-upload">
+                    <input type="file" name="file">
+                    <span class="upload-button">Choose File</span>
+                </label>
+                <input type="submit" value="Upload" class="submit-button">
+            </form>
+        <div class = "dog">
+            <img src="{{url_for('static', filename='css/doggiftedit3.gif')}}" class = "dog2"/>
+        </div>        
+        </div>
+
+        {% if icount == 1 %}
+            <div class="todo" id = "important">
+                <h2>Current Tasks</h2>
+                {% for todo in it5_in %}
+                <div class= "minitask">
+                    <!-- Fetching a todo -->
+                    <p> {{ todo['content'] }}
+                        <!--<i>{{ todo['timestamp'] }}</i>-->
+                    </p>
+                
+                    <!-- Deleting a todo -->
+                    <form method="POST" class = "deleteform" action="{{ url_for('delete', id=todo['_id']) }}">
+                        <input type="submit" value="🗑" class = "delete-button" 
+                        />
+                    </form>
+                </div>
+                {% endfor %}
+                <a href="overflow1.html">
+                    <div class= "minitask">Click for more</div>
+                </a>
+                
+            </div>
+        {%else%} 
+            <div class="todo" id = "important">
+                <h2>Current Tasks</h2>
+                {% for todo in todos_important %}
+                <div class= "minitask">
+                    <!-- Fetching a todo -->
+                    <p> {{ todo['content'] }}
+                        <!--<i>{{ todo['timestamp'] }}</i>-->
+                    </p>
+                
+                    <!-- Deleting a todo -->
+                    <form method="POST" class = "deleteform" action="{{ url_for('delete', id=todo['_id']) }}">
+                        <input type="submit" value="🗑" class = "delete-button" onclick="return confirm('Are you sure you want to delete this entry?')"/>
+                    </form>
+                </div>
+                {% endfor %} 
+            </div>
+        {%endif%}
+
+        {% if uncount == 1 %}
+            <div class="todo" id = "unimportant">
+                <h2>Unfinished Tasks</h2>
+                {% for todo in unt5_in %}
+                <div class= "minitask">
+                    <!-- Fetching a todo -->
+                    <p> {{ todo['content'] }}
+                        <!--<i>{{ todo['timestamp'] }}</i>-->
+                    </p>
+                
+                    <!-- Deleting a todo -->
+                    <form method="POST" class = "deleteform"  action="{{ url_for('delete', id=todo['_id']) }}">
+                        <input type="submit" value="🗑" class = "delete-button" onclick="return confirm('Are you sure you want to delete this entry?')"/>
+                    </form>
+                </div>
+                {% endfor %}  
+                <a href="overflow1.html">
+                    <div class= "minitask">Click for more</div>
+                </a>
+            </div>
+        {%else%}
+            <div class="todo" id = "unimportant">
+                <h2>Unfinished Tasks</h2>
+                {% for todo in unt5_in %}
+                <div class= "minitask">
+                    <!-- Fetching a todo -->
+                    <p> {{ todo['content'] }}
+                        <!--<i>{{ todo['timestamp'] }}</i>-->
+                    </p>
+                
+                    <!-- Deleting a todo -->
+                    <form method="POST" class = "deleteform"  action="{{ url_for('delete', id=todo['_id']) }}">
+                        <input type="submit" value="🗑" class = "delete-button" onclick="return confirm('Are you sure you want to delete this entry?')"/>
+                    </form>
+                </div>
+                {% endfor %}  
+            </div>
+        {%endif%}
+
+    </div>
+</body>
+</html>
+
+<!-- ✎ -->

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/stylewav.css')}}"/>
+</head>
+<body>
+    <div class="top-banner">
+        <h1>Dawson</h1>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="schedule.html">Schedule</a>
+        </div>
+    </div>
+
+
+
+    <div class = "mainbody">
+        <div class = "left">
+            <div class = "top">
+                <h2><strong>Hey,</strong> <span>here's what you <br> 
+                might've missed <br>
+                while you were away!</h2></span>
+            </div>
+            <div class = "bottom">
+                <img src="{{url_for('static', filename='css/dogfly.gif')}}" class = "dog"/>
+            </div>
+        </div>
+        <div class = "right">
+            
+        {%if count == 0%}
+            {%for todo in new_todos %}
+            <!-- Display the pre-filled text -->
+                <div class= "minitask">
+                <!-- Fetching a todo -->
+                <p> {{ todo['content'] }}
+                    <!--<i>{{ todo['timestamp'] }}</i>-->
+                </p>
+                    <div class = "buttons">
+                        <form method="POST" class = "deleteform" action="{{ url_for('delete_wav', id=todo['_id']) }}">
+                            <input type="submit" value="+" class = "delete-button"/>
+                        </form>
+                        <form method="POST" class = "deleteform" action="{{ url_for('remove_wav', id=todo['_id']) }}">
+                            <input type="submit" value="🗑" class = "delete-button" onclick="return confirm('Are you sure you want to delete this entry?')"/>
+                        </form>
+                    </div>
+                </div>
+            {%endfor%}
+        {%else%}
+            {%for todo in top_3_new %}
+            <!-- Display the pre-filled text -->
+                <div class= "minitask">
+                <!-- Fetching a todo -->
+                <p> {{ todo['content'] }}
+                    <!--<i>{{ todo['timestamp'] }}</i>-->
+                </p>
+                    <div class = "buttons">
+                        <form method="POST" class = "deleteform" action="{{ url_for('delete_wav', id=todo['_id']) }}">
+                            <input type="submit" value="+" class = "delete-button"/>
+                        </form>
+                        <form method="POST" class = "deleteform" action="{{ url_for('remove_wav', id=todo['_id']) }}">
+                            <input type="submit" value="🗑" class = "delete-button" onclick="return confirm('Are you sure you want to delete this entry?')"/>
+                        </form>
+                    </div>
+                </div>
+                
+            {%endfor%}
+            <div class= "minitask2">More!</div>
+            
+        </div>
+        {%endif%}
+            <!--<h3>{{todo}}</h3>-->
+        
+
+
+    </div>
+    
+    
+</body>
+</html>
