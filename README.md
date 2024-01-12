@@ -21,4 +21,4 @@ The project in the repo is a Flask/MongoDB/HTML5/CSS fullstack web application t
 
 ### Vision:
 *This project is intended to be accessible to individuals who are interested in implimenting the same thing I was, automation and improved ease of life.*
-*To this note, this program is intended to be personally integrated (as I think trusting someone else with all of your audio data is essentially a privacy violation), so upon finishing, the setup, services used, hardware used, etc. for the final version will be posted here or likely in a linked repository in order to provide access*
+*To this note, this program is intended to be personally integrated (as I think trusting someone else with all of your audio data borders a privacy violation), so upon finishing, the setup, services used, hardware used, etc. for the final version will be posted here or likely in a linked repository in order to provide access*
