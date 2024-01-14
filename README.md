@@ -4,12 +4,12 @@
 
 The project in the repo is a Flask/MongoDB/HTML5/CSS fullstack web application that's an upgrade to a classic 'to-do' list application. It uses Tensorflow and WhisperAI to convert uploaded audio files into parsed tasks that you can add to your list.
 
-### Upcoming DawsonV2.0 features:
+### Upcoming DawsonV2.0 feature(s):
 + Microphone feature for real time text-to-task parsing
 + Mobile App
 + **Deployment of Web and Mobile Applications**
 
-### Upcoming DawsonV3.0 features:
+### Upcoming DawsonV3.0 feature(s):
 + **Wearable Microphone device**
 
 ### Backburner Features (DawsonVx.x):
