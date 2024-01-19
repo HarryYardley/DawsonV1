@@ -2,7 +2,6 @@ from flask import Flask, render_template, url_for, request, redirect, jsonify
 from pymongo import MongoClient
 from datetime import datetime
 from bson.objectid import ObjectId
-import copy
 
 TF_ENABLE_ONEDNN_OPTS = 0
 
