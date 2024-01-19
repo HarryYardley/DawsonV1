@@ -3,17 +3,40 @@ from pymongo import MongoClient
 from datetime import datetime
 from bson.objectid import ObjectId
 
+import numpy as np
+import tensorflow as tf
+import whisper
+
 TF_ENABLE_ONEDNN_OPTS = 0
 
-app = Flask(__name__, static_url_path='/static')
+app = Flask(__name__)
 
-import whisper
-import spacy
+trained_model = None
+
+def load_model():
+    global trained_model
+    trained_model = tf.keras.models.load_model('trained_model.keras')
+
+load_model()
 
 model = whisper.load_model('base')
-nlp = spacy.load('en_core_web_sm')
-
 client = MongoClient('localhost', 27017)
+
+##########################################################################
+#########################  BLOCK FOR SPACE  ##############################
+##########################################################################
+
+def load_and_use_model(my_list_in = []):
+    final_list = []
+    for text_in in my_list_in:
+        predictions = use_model(text_in)
+        if predictions > 0.8:
+            final_list.append(text_in)
+    return final_list
+
+def use_model(sample_text):
+    p = trained_model.predict(np.array([sample_text]))
+    return p
 
 #default is get, can explicitly declare other methods
 @app.route("/", methods=['GET', 'POST'])
@@ -109,44 +132,24 @@ def wavmove():
 
     return redirect(url_for('wavsort'))
 
-##########################################################################
-from use_model import use_model
-def main_load_and_use_v2(my_list_in = []):
-    final_list = []
-    for text_in in my_list_in:
-        predictions = use_model(text_in)
-        if predictions > 0.8:
-            final_list.append(text_in)
-    return final_list
-##########################################################################
-
 def pass_to_api(file):
     file_path = 'temp.wav'
     file.save(file_path)
     # Use the uploaded file with your script
+    
     result = model.transcribe(file_path, fp16=False)
     text = result['text']
+    
     #the below line sends through the following, comment it out to send the actual text
     #from the audio clip (in line above)
+    
     #text = 'I need to go to the store tomorrow. His shirt is big and yellow. I think bob is ugly. I need to make an appointment'
     splitted = text.split('. ')
     proc = []
     for i in range(len(splitted)):
         proc.append(splitted[i])
-    return main_load_and_use_v2(proc)
+    return load_and_use_model(proc)
 
-"""
-    if request.method == 'POST':
-        content = request.form['content']
-        degree = request.form['degree']
-        timestamp = str(datetime.now())
-        datetime_obj = datetime.strptime(timestamp, '%Y-%m-%d %H:%M:%S.%f')
-        formatted_date = datetime_obj.strftime('%B %d')
-        formatted_date = datetime.now()
-        
-        todos.insert_one({'content': content, 'degree': degree, 'timestamp': formatted_date, 'new_old': "old"})
-        return render_template('wavfile.html', pre_filled_text=proc)
-""" 
     #return render_template('wavfile.html', pre_filled_text=proc)
 ###########################################################################################
 @app.post("/wavfile/<id>/delete/")
