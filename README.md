@@ -11,6 +11,7 @@ The project in the repo is a Flask/MongoDB/HTML5/CSS fullstack web application t
 
 ### Upcoming DawsonV3.0 feature(s):
 + **Wearable Microphone device**
+  + *Consisting of Raspberry Pi 4 w/ Google Coral Stick integration & TF Lite model*
 
 ### Backburner Features (DawsonVx.x):
 + Schedule Feature
