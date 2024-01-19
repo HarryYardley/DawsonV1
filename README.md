@@ -2,6 +2,8 @@
 
 **Dawson** is a project designed around the idea of automating difficult, annoying, and repetative parts of life.
 
+The first modality of the project is speec recognition and integration, with future plays of vision, logic, and home synthesis.
+
 The project in the repo is a Flask/MongoDB/HTML5/CSS fullstack web application that's an upgrade to a classic 'to-do' list application. It uses Tensorflow and WhisperAI to convert uploaded audio files into parsed tasks that you can add to your list.
 
 ### Upcoming DawsonV2.0 feature(s):
