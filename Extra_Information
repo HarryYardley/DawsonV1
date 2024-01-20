@@ -1,28 +1,28 @@
-# DawsonV1.0
+Dawson
 
-**Dawson** is a project designed around the idea of automating difficult, annoying, and repetative parts of life.
+Dawson is a project designed around the idea of automating difficult, annoying, and repetative parts of life.
 
 The first modality of the project is speec recognition and integration, with future plays of vision, logic, and home synthesis.
 
 The project in the repo is a Flask/MongoDB/HTML5/CSS fullstack web application that's an upgrade to a classic 'to-do' list application. It uses Tensorflow and WhisperAI to convert uploaded audio files into parsed tasks that you can add to your list.
 
-### Upcoming DawsonV2.0 feature(s):
+Upcoming DawsonV2.0 feature(s):
 + Microphone feature for real time text-to-task parsing
 + Mobile App
 + **Deployment of Web and Mobile Applications**
 
-### Upcoming DawsonV3.0 feature(s):
-+ **Wearable Microphone device**
+Upcoming DawsonV3.0 feature(s):
++ Wearable Microphone device
   + *Consisting of Raspberry Pi 4 w/ Google Coral Stick integration & TF Lite model*
 
-### Backburner Features (DawsonVx.x):
+Backburner Features (DawsonVx.x):
 + Schedule Feature
 + Smart task time and subject sorting
 + Location based task sorting & mobile integration
 + Refined classification (time-tense sensitive)
 + User specific voice recognition
 
-### Vision:
-*This project is intended to be accessible to individuals who are interested in implimenting the same thing I was, automation and improved ease of life.*
+Vision:
+This project is intended to be accessible to individuals who are interested in implimenting the same thing I was, automation and improved ease of life.
 
-*Features such as vision and self training will become availible in time. Additionally, all hardware used will be posted and outlined in the repo.*
+Features such as vision and self training will become availible in time. Additionally, all hardware used will be posted and outlined in the repo.
