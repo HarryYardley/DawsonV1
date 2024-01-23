@@ -19,7 +19,8 @@ pip install flask
 **WhisperAI:** Download following directions [here](https://github.com/openai/whisper).
 
 *I've personally found the best results using the base model. 
-The tiny model has too many inaccuracies for the Language Classifier to handle*
+The tiny model has too many inaccuracies for the Language Classifier 
+to handle, and base model optimizes speed over larger models*
 ```
 whisper --help
 ```
