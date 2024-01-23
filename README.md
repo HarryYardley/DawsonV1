@@ -17,7 +17,9 @@ pip install pymongo
 pip install flask
 ```
 **WhisperAI:** Download following directions [here](https://github.com/openai/whisper).
-*I've personally found the best results using the base model. The tiny model has too many inaccuracies for the Language Classifier to handle*
+
+*I've personally found the best results using the base model. 
+The tiny model has too many inaccuracies for the Language Classifier to handle*
 ```
 whisper --help
 ```
