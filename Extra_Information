@@ -7,6 +7,7 @@ The project in the repo is a Flask/MongoDB/HTML5/CSS fullstack web application t
 Upcoming DawsonV2.0 feature(s):
 + Microphone feature for real time text-to-task parsing
 + Mobile App
++ Custom schedule tailoring using dual BERT models
 + **Deployment of Web and Mobile Applications**
 
 Upcoming DawsonV3.0 feature(s):
