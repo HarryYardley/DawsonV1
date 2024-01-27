@@ -1,4 +1,4 @@
-# Dawson.Heard.V1.0
+# Dawson.Heard.V1
 
 **Dawson** is a personal project with the goal of integrating Artificial Intelligence with your everyday life.
 
