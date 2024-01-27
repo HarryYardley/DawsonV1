@@ -24,6 +24,7 @@ to handle, and base model optimizes speed over larger models*
 ```
 whisper --help
 ```
+*Run the above for more information on whisper post-install*
 
 ## Features
 ### Current features
