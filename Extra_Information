@@ -4,7 +4,7 @@ The first modality of the project is speec recognition and integration, with fut
 
 The project in the repo is a Flask/MongoDB/HTML/CSS fullstack web application that's an upgrade to a classic 'to-do' list application. It uses Tensorflow and WhisperAI to convert uploaded audio files into parsed tasks that you can add to your list.
 
-Upcoming DawsonV2.0 feature(s):
+Upcoming DawsonV2.0 features:
 + Microphone feature for real time text-to-task parsing
 + Mobile App
 + Custom schedule tailoring using dual BERT models
